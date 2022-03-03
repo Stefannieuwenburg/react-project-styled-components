@@ -1,11 +1,13 @@
 import { ButtonProps } from "./Components/ButtonProps.style";
 import { AppContainer } from "./Components/Container.style";
 import { Button,GreenButton} from "./Components/Button.style"
-
+import { GlobalStyles } from './GlobalStyles.style'
 
 export default function App() {
   return (
-      <AppContainer>
+    
+    <AppContainer>
+      <GlobalStyles/>
           <h1>Style your components in react whith styled-components</h1>
           <br />
           <ButtonProps backgroundColor="red">Click this button</ButtonProps>
