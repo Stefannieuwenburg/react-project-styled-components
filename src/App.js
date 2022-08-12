@@ -1,20 +1,32 @@
-import { ButtonProps } from "./Components/ButtonProps.style";
-import { AppContainer } from "./Components/Container.style";
-import { Button,GreenButton} from "./Components/Button.style"
-import { GlobalStyle } from './GlobalStyle.style'
+import {
+    GlobalStyle,
+    GreenButton,
+    Button,
+    ButtonProps,
+    HeaderContainer,
+    HeaderTitle,
+} from "./GlobalStyle";
+import Footer from "./Components/Footer";
+import FooterDemo from "./Components/FooterDemo";
+import FooterGrid from "./Components/FooterGrid";
+
 
 export default function App() {
   return (
-    
-    <AppContainer>
+    <>
+    <HeaderContainer>
       <GlobalStyle/>
-          <h1>Style your components in react whith styled-components</h1>
+          <HeaderTitle>Style your components in react whith styled-components</HeaderTitle>
           <br />
-          <ButtonProps backgroundColor="red">Click this button</ButtonProps>
-      <ButtonProps backgroundColor="violet">Click this button</ButtonProps>
+          <ButtonProps color="red">Click this button</ButtonProps>
+      <ButtonProps color="violet">Click this button</ButtonProps>
       <Button>click me</Button>
       <GreenButton>click me</GreenButton>
-      </AppContainer>
+      </HeaderContainer>
+      <Footer />
+      <FooterDemo />
+      <FooterGrid />
+    </>
   );
 }
 
