@@ -1,10 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import {
-    GlobalStyle,
-    GreenButton,
-    Button,
-    ButtonProps,
+    
     HeaderTitle,
     Paragraph,
 } from "../GlobalStyle";
@@ -105,22 +102,22 @@ const FooterGrid = () => {
                 <div>
                     <ul>
                         <li>
-                            <a class="facebook" href="#">
+                            <a class="facebook" href="#1">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a class="twitter" href="#">
+                            <a class="twitter" href="#2">
                                 <i class="fa fa-twitter"></i>
                             </a>
                         </li>
                         <li>
-                            <a class="dribbble" href="#">
+                            <a class="dribbble" href="#3">
                                 <i class="fa fa-dribbble"></i>
                             </a>
                         </li>
                         <li>
-                            <a class="linkedin" href="#">
+                            <a class="linkedin" href="#4">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </li>

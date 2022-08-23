@@ -1,3 +1,23 @@
+# layout Page dir order
+
+# src/assets
+logo
+illustrations
+pictures
+# src/data
+data
+# src/components
+Navbar
+Header
+Hero
+# pages/section
+MainSection
+PricingPage
+SignupPage
+ServiceSection
+AboutSection
+CardSection
+Footer
 # Styled Components try out for learing
 
 bulding button en div componenten for styling them up inside a js file

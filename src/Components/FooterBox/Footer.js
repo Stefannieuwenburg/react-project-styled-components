@@ -1,12 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import {
-    GlobalStyle,
-    GreenButton,
-    Button,
-    ButtonProps,
-    HeaderTitle,
-} from "../GlobalStyle";
+import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 
 const FooterContainer = styled.div`
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
@@ -221,19 +215,19 @@ const Footer = () => {
                         </h3>
 
                         <p class="footer-links">
-                            <a href="#" class="link-1">
+                            <a href="/#" class="link-1">
                                 Home
                             </a>
 
-                            <a href="#">Blog</a>
+                            <a href="/#">Blog</a>
 
-                            <a href="#">Pricing</a>
+                            <a href="/#">Pricing</a>
 
-                            <a href="#">About</a>
+                            <a href="/#">About</a>
 
-                            <a href="#">Faq</a>
+                            <a href="/#">Faq</a>
 
-                            <a href="#">Contact</a>
+                            <a href="/#">Contact</a>
                         </p>
 
                         <p class="footer-company-name">Company Name © 2022</p>
@@ -250,7 +244,7 @@ const Footer = () => {
 
                         <div>
                             <i class="fa fa-phone"></i>
-                            <p>+1.555.555.5555</p>
+                            <p>+311239875</p>
                         </div>
 
                         <div>
@@ -272,20 +266,20 @@ const Footer = () => {
                         </p>
 
                         <div class="footer-icons">
-                            <a href="#">
-                                <i class="fa fa-facebook"></i>
+                            <a href="/#">
+                                <FaLinkedin />
                             </a>
-                            <a href="#">
-                                <i class="fa fa-linkedin"></i>
+
+                            <a href="/#">
+                                <FaGithub />
                             </a>
-                            <a href="#">
-                                <i class="fa fa-github"></i>
+
+                            <a href="/#">
+                                <FaFacebook />
                             </a>
                         </div>
                     </div>
-                    </div>
-                
-            
+                </div>
             </FooterContainer>
         </Fragment>
     );

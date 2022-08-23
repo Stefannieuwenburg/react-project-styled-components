@@ -1,33 +1,29 @@
-import {
-    GlobalStyle,
-    GreenButton,
-    Button,
-    ButtonProps,
-    HeaderContainer,
-    HeaderTitle,
-} from "./GlobalStyle";
-import Footer from "./Components/Footer";
-import FooterDemo from "./Components/FooterDemo";
-import FooterGrid from "./Components/FooterGrid";
+import React, { Fragment } from "react";
+import styled from "styled-components";
+import GlobalStyle from "./GlobalStyle";
 
+import NavBar from "./Components/NavBox/NavGrid";
+import Footer from "./Components/FooterBox/StyledFooter"
 
-export default function App() {
+const Paragraph = styled.h1`
+    height: 20vh;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    background-color:red;
+`;
+
+const App = () => {
   return (
-    <>
-    <HeaderContainer>
-      <GlobalStyle/>
-          <HeaderTitle>Style your components in react whith styled-components</HeaderTitle>
-          <br />
-          <ButtonProps color="red">Click this button</ButtonProps>
-      <ButtonProps color="violet">Click this button</ButtonProps>
-      <Button>click me</Button>
-      <GreenButton>click me</GreenButton>
-      </HeaderContainer>
-      <Footer />
-      <FooterDemo />
-      <FooterGrid />
-    </>
+      <Fragment>
+          <GlobalStyle />
+          <NavBar />
+          <Paragraph>test page</Paragraph>
+          <Footer />
+      </Fragment>
   );
-}
-
-
+};
+export default App;
