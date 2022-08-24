@@ -1,10 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import {
-    
-    HeaderTitle,
-    Paragraph,
-} from "../GlobalStyle";
+import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import {HeaderTitle,Paragraph} from "../GlobalStyle";
 
 const FooterContainer = styled.div`
     ul {
@@ -102,26 +99,20 @@ const FooterGrid = () => {
                 <div>
                     <ul>
                         <li>
-                            <a class="facebook" href="#1">
-                                <i class="fa fa-facebook"></i>
+                            <a href="/#">
+                                <FaLinkedin />
                             </a>
                         </li>
                         <li>
-                            <a class="twitter" href="#2">
-                                <i class="fa fa-twitter"></i>
+                            <a href="/#">
+                                <FaGithub />
                             </a>
                         </li>
                         <li>
-                            <a class="dribbble" href="#3">
-                                <i class="fa fa-dribbble"></i>
+                            <a href="/#">
+                                <FaFacebook />
                             </a>
                         </li>
-                        <li>
-                            <a class="linkedin" href="#4">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                        
                     </ul>
                 </div>
                 <Paragraph>© 2022 Copyright: Stefan Nieuwenburg</Paragraph>

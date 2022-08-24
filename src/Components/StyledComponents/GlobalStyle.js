@@ -39,6 +39,7 @@ body {
     --Brown:'brown'
     --Grey:'grey'
     --Black:'black'
+    --Glass:rgba(0, 0, 0, 0.404)
     --shadow:0 1px 5px rgba(104,104,104,0.8)
      /* Extra  */
     --main-font: 'Roboto Mono';

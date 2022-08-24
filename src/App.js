@@ -2,27 +2,31 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import GlobalStyle from "./GlobalStyle";
 
-import NavBar from "./Components/NavBox/NavGrid";
-import Footer from "./Components/FooterBox/StyledFooter"
+import Navbar from "./Components/NavComponents/NavBarTwo"
 
-const Paragraph = styled.h1`
-    height: 20vh;
-    font-size: 1.2rem;
-    padding: 0.2rem;
+const Container = styled.div`
+    background: #67bc98;
+    height: 100vh;
+`;
+const TestPage = styled.div`
+    background-color: #282c34;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    color: whitesmoke;
-    background-color:red;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+    height: 100vh;
 `;
 
 const App = () => {
   return (
       <Fragment>
           <GlobalStyle />
-          <NavBar />
-          <Paragraph>test page</Paragraph>
-          <Footer />
+          <Navbar />
+          <Container>test</Container>
+          <TestPage>Test Page</TestPage>
       </Fragment>
   );
 };
