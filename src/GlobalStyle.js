@@ -1,20 +1,55 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-body {
+*,
+*::before,
+*::after,
+body, 
+html {
     @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap");
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: "Karla", "Segoe UI", "Roboto",'Roboto Mono', monospace,
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+a:hover{
+    color: var(--color-brand);
+}
+
+button{
+    cursor: pointer;
+    color: inherit;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 :root{
     /* Page color */
     --PageWhite:#f9f9fb;
@@ -39,6 +74,7 @@ body {
     --Brown:'brown'
     --Grey:'grey'
     --Black:'black'
+    --Glass:rgba(0, 0, 0, 0.404)
     --shadow:0 1px 5px rgba(104,104,104,0.8)
      /* Extra  */
     --main-font: 'Roboto Mono';
@@ -48,13 +84,107 @@ body {
     --shadow:0 1px 5px rgba(104,104,104,0.8)
     --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
     --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
-}
 
+    /* ----- Font Weight ----- */
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --fw-bolder: 800;
+
+
+/* --- Typography ----- */
+--font-family: 'Poppins', sans-serif;
+--font-family-narrow: 'Archivo Narrow', sans-serif;
+--font-family-alt: 'Playfair Display', serif;
+
+/* --------  Font Size  -------*/
+--fs-largest: 2.25rem;
+--fs-h1: 1.5rem;
+--fs-h2: 1.25rem;
+--fs-h3: 1rem;
+--fs-normal: 0.938rem;
+--fs-small: 0.813rem;
+--fs-smaller: 0.75rem;
+
+}
 `;
 
 export default GlobalStyle;
 
-// export const
+/********-- Export Const --*******/
+
+/* ----- Create media queries ----- */
+
+export const mobile = (props) => {
+    return css`
+        @media (min-width: 420px) {
+            ${props}
+        }
+    `;
+};
+
+export const mobileMd = (props) => {
+    return css`
+        @media (min-width: 576px) {
+            ${props}
+        }
+    `;
+};
+
+export const tablet = (props) => {
+    return css`
+        @media (min-width: 768px) {
+            ${props}
+        }
+    `;
+};
+
+export const tabletMd = (props) => {
+    return css`
+        @media (min-width: 992px) {
+            ${props}
+        }
+    `;
+};
+
+export const tabletLg = (props) => {
+    return css`
+        @media (min-width: 1050px) {
+            ${props}
+        }
+    `;
+};
+
+export const laptop = (props) => {
+    return css`
+        @media (min-width: 1200px) {
+            ${props}
+        }
+    `;
+};
+
+export const laptopMd = (props) => {
+    return css`
+        @media (min-width: 1400px) {
+            ${props}
+        }
+    `;
+};
+
+// How to use media queries
+/* /420 */
+// ${mobile({})}
+/* 576 */
+// ${mobileMd({})}
+/* 768 */
+// ${tablet({})}
+/* 992 */
+// ${tabletMd({})}
+/* 1050 */
+// ${tabletLg({})}
+/* 1200 */
+// ${laptop({})}
+
 export const AppHeader = styled.div`
     background-color: #282c34;
     min-height: 100vh;
@@ -71,6 +201,12 @@ export const AppContainer = styled.div`
     display: grid;
     grid-gap: 2em;
     margin: 10px 10px;
+`;
+export const Bimg = styled.img`
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/coffeeshop.jpg");
+    min-height: 75%;
 `;
 export const Grid = styled.section`
     display: grid;
