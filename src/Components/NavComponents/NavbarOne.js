@@ -3,12 +3,9 @@ import styled from "styled-components";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export const Container = styled.div`
-    background: #67bc98;
-    height: 100vh;
-`;
 
-const MenuLink = styled.a`
+
+const Link = styled.a`
     padding: 1rem 2rem;
     cursor: pointer;
     text-align: center;
@@ -81,19 +78,25 @@ const Navbar = () => {
     return (
         <Fragment>
             <Nav>
-                <Logo href="/#">
-                    Logohome
-                </Logo>
+                <Logo href="/#">Logohome</Logo>
                 <Hamburger onClick={() => setIsOpen(!isOpen)}>
                     <GiHamburgerMenu
                         style={{ color: "white", fontSize: "30px" }}
                     />
                 </Hamburger>
                 <Menu isOpen={isOpen}>
-                    <MenuLink href="/#">Our Work</MenuLink>
-                    <MenuLink href="/#">About</MenuLink>
-                    <MenuLink href="/#">Careers</MenuLink>
-                    <MenuLink href="/#">Contact</MenuLink>
+                    <Link href="/#" onClick={() => setIsOpen(false)}>
+                        Our Work
+                    </Link>
+                    <Link href="/#" onClick={() => setIsOpen(false)}>
+                        About
+                    </Link>
+                    <Link href="/#" onClick={() => setIsOpen(false)}>
+                        Careers
+                    </Link>
+                    <Link href="/#" onClick={() => setIsOpen(false)}>
+                        Contact
+                    </Link>
                 </Menu>
             </Nav>
         </Fragment>
