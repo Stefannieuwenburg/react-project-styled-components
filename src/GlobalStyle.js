@@ -62,7 +62,7 @@ body {
     font-family: var(--Main-font)
 }
 img {
-  width:90%;
+  width:100%;
   height:auto;
   object-fit: cover;
 }
@@ -148,7 +148,7 @@ export const laptopMd = (props) => {
 // ${laptop({})}
 
 export const AppHeader = styled.div`
-    background-color: #282c34;
+    background-color: #696969;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -158,38 +158,40 @@ export const AppHeader = styled.div`
     color: white;
     text-align: center;
 `;
-
-export const AppContainer = styled.div`
-    display: grid;
-    grid-gap: 2em;
-    margin: 10px 10px;
+export const flexContainer = styled.div`
+    background-color: #696969;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+    height: 100vh;
 `;
-export const Grid = styled.section`
+
+export const GridWrapper = styled.section`
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `;
-export const Image = styled.img`
-    background-image: url(https://picsum.photos/1280?image=849);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+export const GridDemoContainer = styled.div`
+        display: grid;
+        grid-template-columns:100px 1fr 100px;
+        grid-template-rows:45px 1fr 45px;
+        grid-template-areas:
+        "header header  header",
+        "menu   content ads   ",
+        "footer footer  footer";         
 `;
-export const BoxContainer = styled.div`
-    width: 500px;
-    padding: 50px;
-    color: yellow;
-    background: blue;
-`;
-export const Container = styled.div`
+
+
+export const GridContainerDemo = styled.div`
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 20vh;
     color: white;
-    background-color: #141414;
+    background-color: #696969;
 `;
 export const FooterMain = styled.div`
     display: flex;
@@ -309,4 +311,13 @@ export const ButtonProps = styled.button`
         background-color: var(--Orange);
         transition: 0.6s;
     }
+`;
+export const BackgroundImage = styled.img`
+    background-image: url(https://picsum.photos/1280?image=849);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 `;
