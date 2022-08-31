@@ -1,7 +1,20 @@
+// npm i --save-dev @types/styled-components
+
 import styled, { css } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+*{
+    @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "Karla", "Segoe UI", "Roboto",'Roboto Mono', monospace,
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    scroll-behavior: smooth;
+}
 :root{
     /* ---Page Color--- */
     --Main-Color:#d3ad7f;
@@ -44,17 +57,7 @@ const GlobalStyle = createGlobalStyle`
     --fs-smaller: 0.75rem;
 }
 
-*{
-    @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap");
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family: "Karla", "Segoe UI", "Roboto",'Roboto Mono', monospace,
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-    scroll-behavior: smooth;
-}
+
 html {
     background:var(--Black-Color)
 }
@@ -176,15 +179,12 @@ export const GridWrapper = styled.section`
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `;
 export const GridDemoContainer = styled.div`
-        display: grid;
-        grid-template-columns:100px 1fr 100px;
-        grid-template-rows:45px 1fr 45px;
-        grid-template-areas:
-        "header header  header",
-        "menu   content ads   ",
-        "footer footer  footer";         
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 45px 1fr 45px;
+    grid-template-areas: "header header  header", "menu   content ads   ",
+        "footer footer  footer";
 `;
-
 
 export const GridContainerDemo = styled.div`
     display: grid;
