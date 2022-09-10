@@ -1,29 +1,52 @@
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
 ## General info
-This project 
-	
+
+After watching a React tutorial on youtube, I made this website to practice what I learned about React. It was fun designing the website from scratch in Figma and coding it out step by step with styled-components. I also added some pages to continue learning about React router and how it is used. Overall I learned a lot and googled alot too, haha.
+
+
+
 ## Technologies
 Project is created with:
 * 
 * 
 * 
-	
-## Setup
-To run this project, install it locally using npm:
 
+- [React JS](https://reactjs.org/)
+- [React Router](https://github.com/ReactTraining/react-router)
+- [Styled Components](https://www.styled-components.com)
+
+
+## [Check it live here](https://****/)
+
+
+
+## Getting Started
+
+### Installing
+
+Clone the Repository and run
+
+```js
+npm install/ npm i
+npm run start
 ```
-$ cd ../lorem
-$ npm install
-$ npm start
+
+## Deployment
+
+To deploy simply run
+
+```js
+npm run build
 ```
 
-### [Live Site](https://.com)
 
-![Portfolio Website](https://)
+## Authors
+
+**Stefan Nieuwenburg** 
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
 
 # layout Page dir order
